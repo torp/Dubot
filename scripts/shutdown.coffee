@@ -14,13 +14,14 @@ module.exports = (robot) ->
     die() if check
 
   die = () ->
-   process.exit 0
+    console.log('Exiting...')
+    process.exit 0
 
-  robot.on 'close', () ->
+  robot.brain.on 'close', (event) ->
     status.brain = false
     checkStatus(status)
 
-  robot.on 'adapterClose', () ->
+  robot.adapter.on 'close', (event) ->
     status.adapter = false
     checkStatus(status)
 
