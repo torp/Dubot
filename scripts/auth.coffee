@@ -94,7 +94,7 @@ module.exports = (robot) ->
     return msg.reply "#{name} does not exist" unless user?
     user.roles or= []
 
-    if @auth.isAdmin(user)
+    if robot.auth.isAdmin(user)
       isAdmin = ' and is also an admin'
     else
       isAdmin = ''
