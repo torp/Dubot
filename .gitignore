@@ -1,0 +1,6 @@
+.git
+node_modules
+nohup*
+*.log
+tmp
+.tmp
