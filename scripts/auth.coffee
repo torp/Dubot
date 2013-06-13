@@ -39,6 +39,8 @@ module.exports = (robot) ->
     admins = []
 
   class Auth
+    isAdmin: (user) ->
+      return user.id.toString() in admins
     hasRole: (user, roles) ->
       user = robot.brain.userForId(user.id)
       if user? and user.roles?
@@ -92,7 +94,7 @@ module.exports = (robot) ->
     return msg.reply "#{name} does not exist" unless user?
     user.roles or= []
 
-    if user.id.toString() in admins
+    if @auth.isAdmin(user)
       isAdmin = ' and is also an admin'
     else
       isAdmin = ''

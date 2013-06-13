@@ -25,3 +25,9 @@ module.exports = (robot) ->
     status.adapter = false
     checkStatus(status)
 
+  robot.respond /DIE$/i, (msg) ->
+    if robot.auth.isAdmin msg.message.user
+      msg.send "Goodbye, cruel world."
+      robot.shutdown()
+    else
+      msg.send "OH HELL NAW!!!"
