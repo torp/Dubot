@@ -1,7 +1,8 @@
 #!/bin/bash
 export HUBOT_AUTH_ADMIN="kc,kingcody,k1n9c0dy,asmundr,torphal,skinnypup,plotta"
 export HUBOT_IRC_SERVER="irc.torpnet.us"
-export HUBOT_IRC_ROOMS="#linux,#milledgeville,#torpnest"
+export HUBOT_IRC_ROOMS="#linux"
+#,#milledgeville,#torpnest"
 export HUBOT_IRC_NICK="Dubot"
 export HUBOT_IRC_PORT="6669"
 export HUBOT_IRC_SERVER_FAKE_SSL="true"
