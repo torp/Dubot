@@ -4,8 +4,11 @@
 # Commands:
 #   hubot dump <object> - Reply back with <object>
 
+stringify = require 'json-stringify-safe'
+
 module.exports = (robot) ->
   robot.respond /DUMP (.*)$/i, (msg) ->
-    msg.send JSON.stringify @[msg.match[1]]
-    console.log msg.match[1]
-    console.log robot[msg.match[1].replace '"','']
+    if msg.match[1] is ''
+      msg.send stringify robot
+    else
+      msg.send stringify robot[msg.match[1]], null, 2
