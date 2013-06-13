@@ -1,5 +1,5 @@
 Dubot
 =====
-*The Bot that Dues*
+*The Bot that Duz*
 
 TORP's custom Hubot
