@@ -6,6 +6,7 @@ export HUBOT_IRC_NICK="Dubot"
 export HUBOT_IRC_PORT="6669"
 export HUBOT_IRC_SERVER_FAKE_SSL="true"
 export HUBOT_IRC_USESSL="true"
+export HUBOT_IRC_REJOIN="true"
 
 echo ""
 echo "Starting Hubot"
