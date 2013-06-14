@@ -20,9 +20,9 @@
     "url": "https://github.com/torp/dubot.git"
   },
   "dependencies": {
-    "hubot": "git://github.com/torp/hubot.git#master",
-    "hubot-irc": "git://github.com/torp/hubot-irc.git#master",
-    "hubot-scripts": "git://github.com/torp/hubot-scripts.git#master",
+    "hubot": "git://github.com/torp/hubot.git",
+    "hubot-irc": "git://github.com/torp/hubot-irc.git",
+    "hubot-scripts": "git://github.com/torp/hubot-scripts.git",
     "json-stringify-safe": "~5.0.0",
     "redis": "=0.8.2",
     "hiredis": "=0.1.15"
