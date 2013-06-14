@@ -12,3 +12,7 @@ module.exports = (robot) ->
       console.log robot
     else
       msg.send stringify robot[msg.match[1]], null, 2
+
+  robot.respond /SAVE/i, (msg) ->
+    robot.brain.emit 'save'
+    msg.send 'Brain Saved, I think...'

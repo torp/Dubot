@@ -1,5 +1,5 @@
 {
-  "name": "hosted-hubot",
+  "name": "Dubot",
   "version": "2.5.2",
   "author": "GitHub Inc.",
   "keywords": [
@@ -17,14 +17,15 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/github/hubot.git"
+    "url": "https://github.com/torp/dubot.git"
   },
   "dependencies": {
-    "hubot": ">= 2.5.1",
-    "hubot-irc": ">= 0.0.1",
-    "hubot-scripts": ">= 2.4.2",
+    "hubot": "git://github.com/torp/hubot.git#master",
+    "hubot-irc": "git://github.com/torp/hubot-irc.git#master",
+    "hubot-scripts": "git://github.com/torp/hubot-scripts.git#master",
     "json-stringify-safe": "~5.0.0",
-    "redis": "=0.8.2"
+    "redis": "=0.8.2",
+    "hiredis": "=0.1.15"
   },
   "engines": {
     "node": ">= 0.8.x",

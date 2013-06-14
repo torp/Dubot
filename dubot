@@ -8,6 +8,11 @@ export HUBOT_IRC_PORT="6669"
 export HUBOT_IRC_SERVER_FAKE_SSL="true"
 export HUBOT_IRC_USESSL="true"
 export HUBOT_IRC_REJOIN="true"
+export HUBOT_BRAIN_AUTOSAVE="true"
+export HUBOT_BRAIN_AUTOSAVE_INTERVAL="60"
+
+
+export HUBOT_LOG_LEVEL="debug" # Debug INFO
 
 echo ""
 echo "Starting Hubot"
