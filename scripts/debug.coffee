@@ -8,7 +8,7 @@ stringify = require 'json-stringify-safe'
 
 module.exports = (robot) ->
   robot.respond /DUMP (.*)$/i, (msg) ->
-    if msg.match[1] is ''
-      msg.send stringify robot
+    if msg.match[1] is 'robot'
+      console.log robot
     else
       msg.send stringify robot[msg.match[1]], null, 2
