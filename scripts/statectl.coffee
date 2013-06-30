@@ -10,11 +10,11 @@ module.exports = (robot) ->
 
   die = ->
     console.log 'Exiting...'
-    process.send 'poweroff'
+    process.send {command:'poweroff'}
 
   reboot = ->
     console.log 'Rebooting Dubot...'
-    process.send 'reboot'
+    process.send {command:'reboot'}
 
   checkStatus = (status) ->
     check = true

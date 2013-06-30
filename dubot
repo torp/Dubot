@@ -14,22 +14,25 @@ startDubot = function (stop, restart) {
 		}
 	);
 	
-	dubot.on('reboot', function () {
-		restart(dubot);
-	});
-
-	dubot.on('poweroff', function () {
-		stop(dubot);
+	dubot.on('message', function (m) {
+		switch (m.command) {
+			case 'reboot':
+				restart(dubot);
+				break;
+			case 'poweroff':
+				stop(dubot);
+				break;
+		}
 	});
 };
 
 stopDubot = function (dubot) {
-	dubot.exit(0);
+	dubot.kill();
 	process.exit(0);
 };
 
 restartDubot = function (dubot) {
-	dubot.exit(0);
+	dubot.kill();
 	startDubot(stopDubot, restartDubot);
 };
 
