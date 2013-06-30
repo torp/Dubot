@@ -36,7 +36,7 @@ module.exports = (robot) ->
     console.log('irc closed')
     checkStatus(status)
 
-  robot.respond /DIE$/i, (msg) ->
+  robot.respond /POWEROFF$|DIE$/i, (msg) ->
     if robot.auth.isAdmin msg.message.user
       msg.send "Goodbye, cruel world."
       robot.shutdown()
