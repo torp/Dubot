@@ -1,4 +1,4 @@
-#!/root/.nvm/v0.10.12/bin/node
+#!/usr/bin/node
 var fork, hubotPath, startDubot, stopDubot, restartDubot;
 
 fork = require('child_process').fork;
