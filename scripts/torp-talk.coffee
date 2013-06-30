@@ -13,5 +13,5 @@ module.exports = (robot) ->
       msg.send "wee"
       setTimeout ->
         msg.send "weeeeeeeeee!"
-      , 400
-    , 400
+      , 800
+    , 800
