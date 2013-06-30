@@ -1,0 +1,18 @@
+{
+    "path": "node_modules/.bin:node_modules/hubot/node_modules/.bin",
+    "env": {
+        "HUBOT_NAME": "Dubot",
+        "HUBOT_ADAPTER": "irc",
+        "HUBOT_AUTH_ADMIN": "kc,kingcody,k1n9c0dy,asmundr,torphal,skinnypup,plotta",
+        "HUBOT_IRC_SERVER": "torp.doesntexist.com",
+        "HUBOT_IRC_ROOMS": "#linux", 
+        "HUBOT_IRC_NICK": "Dubot",
+        "HUBOT_IRC_PORT": "6669",
+        "HUBOT_IRC_SERVER_FAKE_SSL": "true",
+        "HUBOT_IRC_USESSL": "true",
+        "HUBOT_IRC_REJOIN": "true",
+        "HUBOT_BRAIN_AUTOSAVE": "true",
+        "HUBOT_BRAIN_AUTOSAVE_INTERVAL": "60",
+        "HUBOT_LOG_LEVEL": "debug"
+    }
+}
