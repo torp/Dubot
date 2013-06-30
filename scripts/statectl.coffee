@@ -10,12 +10,11 @@ module.exports = (robot) ->
 
   die = ->
     console.log 'Exiting...'
-    console.log require('forever').list()
-    #robot.poweroff()
+    process.send 'poweroff'
 
   reboot = ->
     console.log 'Rebooting Dubot...'
-    robot.reboot()
+    process.send 'reboot'
 
   checkStatus = (status) ->
     check = true

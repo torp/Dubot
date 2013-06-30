@@ -1,19 +1,36 @@
-#!/bin/bash
-export HUBOT_AUTH_ADMIN="kc,kingcody,k1n9c0dy,asmundr,torphal,skinnypup,plotta"
-export HUBOT_IRC_SERVER="irc.torpnet.us"
-export HUBOT_IRC_ROOMS="#linux"
-#,#milledgeville,#torpnest"
-export HUBOT_IRC_NICK="Dubot"
-export HUBOT_IRC_PORT="6669"
-export HUBOT_IRC_SERVER_FAKE_SSL="true"
-export HUBOT_IRC_USESSL="true"
-export HUBOT_IRC_REJOIN="true"
-export HUBOT_BRAIN_AUTOSAVE="true"
-export HUBOT_BRAIN_AUTOSAVE_INTERVAL="60"
+#!/root/.nvm/v0.10.12/bin/node
+var fork, hubotPath, startDubot, stopDubot, restartDubot;
 
+fork = require('child_process').fork;
+hubotPath = __dirname + '/node_modules/hubot/bin/';
 
-export HUBOT_LOG_LEVEL="debug" # Debug INFO
+startDubot = function (stop, restart) {
+	var dubot = fork(
+		hubotPath + 'hubot',
+		[],
+		{
+			cwd: __dirname,
+			execPath: 'coffee'
+		}
+	);
+	
+	dubot.on('reboot', function () {
+		restart(dubot);
+	});
 
-echo ""
-echo "Starting Hubot"
-./bin/hubot --name Dubot --adapter irc &
+	dubot.on('poweroff', function () {
+		stop(dubot);
+	});
+};
+
+stopDubot = function (dubot) {
+	dubot.exit(0);
+	process.exit(0);
+};
+
+restartDubot = function (dubot) {
+	dubot.exit(0);
+	startDubot(stopDubot, restartDubot);
+};
+
+startDubot(stopDubot, restartDubot);

@@ -25,7 +25,9 @@
     "hubot-scripts": "git://github.com/torp/hubot-scripts.git",
     "json-stringify-safe": "~5.0.0",
     "redis": "=0.8.2",
-    "hiredis": "=0.1.15"
+    "hiredis": "=0.1.15",
+    "cheerio": "~0.12.0",
+    "soupselect": "~0.2.0"
   },
   "engines": {
     "node": ">= 0.8.x",
