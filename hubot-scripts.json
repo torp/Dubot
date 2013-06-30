@@ -1,1 +1,22 @@
-["redis-brain.coffee"]
+[
+  "ambush.coffee",
+  "ascii.coffee",
+  "bitcoin.coffee",
+  "email.coffee",
+  "events.coffee",
+  "google-images.coffee",
+  "help.coffee",
+  "homer.coffee",
+  "maps.coffee",
+  "math.coffee",
+  "mitch-hedberg.coffee",
+  "redis-brain.coffee",
+  "responders.coffee",
+  "roles.coffee",
+  "stallman.coffee",
+  "storage.coffee",
+  "talkative.coffee",
+  "translate.coffee",
+  "weather.coffee",
+  "youtube.coffee"
+]
