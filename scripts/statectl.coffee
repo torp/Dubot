@@ -36,12 +36,19 @@ module.exports = (robot) ->
     console.log('irc closed')
     checkStatus(status)
 
-  robot.respond /POWEROFF$|DIE$/i, (msg) ->
+  robot.respond /DIE$/i, (msg) ->
     if robot.auth.isAdmin msg.message.user
       msg.send "Goodbye, cruel world."
       robot.shutdown()
     else
       msg.send "OH HELL NAW!!!"
+
+  robot.respond /POWEROFF$/i, (msg) ->
+    if robot.auth.isAdmin msg.message.user
+      msg.send "Shut'er down boys!"
+      robot.shutdown()
+    else
+      msg.send "Does NOT compute."
 
   robot.respond /REBOOT$/i, (msg) ->
     if robot.auth.isAdmin msg.message.user
@@ -49,4 +56,4 @@ module.exports = (robot) ->
       rebootCheck = true
       robot.shutdown()
     else
-      msg.send "OH HELL NAW!!!"
+      msg.send "Uhhh.... Do I know you?"
