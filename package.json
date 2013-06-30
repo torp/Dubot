@@ -27,7 +27,10 @@
     "redis": "=0.8.2",
     "hiredis": "=0.1.15",
     "cheerio": "~0.12.0",
-    "soupselect": "~0.2.0"
+    "soupselect": "~0.2.0",
+    "htmlparser": "~1.7.6",
+    "jsdom": "~0.6.5",
+    "underscore": "~1.4.4"
   },
   "engines": {
     "node": ">= 0.8.x",
