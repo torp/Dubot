@@ -4,10 +4,10 @@
 
 
 module.exports = (robot) ->
-  robot.hear /TTMF$/i, (msg) ->
+  robot.hear /ttmf/gi, (msg) ->
     msg.send "TTMF!!!"
 
-  robot.hear /WEE$/i, (msg) ->
+  robot.hear /wee/gi, (msg) ->
     msg.send "wee"
     setTimeout ->
       msg.send "wee"
