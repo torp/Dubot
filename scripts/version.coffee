@@ -19,5 +19,5 @@ module.exports = (robot) ->
   robot.respond /NODE VERSION$/i, (msg) ->
     msg.send 'Node ' + process.version
 
-  robot.respond /HUBOT VERSION$|DUBOT VERSOIN$/i, (msg) ->
+  robot.respond /HUBOT VERSION$|DUBOT VERSION$/i, (msg) ->
     msg.send 'Hubot ' + require(path.resolve('./node_modules/hubot') + '/package.json').version
