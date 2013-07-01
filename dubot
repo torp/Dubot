@@ -1,4 +1,4 @@
-#!/usr/bin/node
+#!/usr/bin/env node
 var fork, hubotPath, startDubot, stopDubot, restartDubot;
 
 fork = require('child_process').fork;
